@@ -1,0 +1,54 @@
+<!--pages/index/index.js.wxml-->
+<view class="indexContainer">
+  <!--轮播图bfc-->
+  <swiper class="banners" indicator-dots="true" indicator-color='ivory' indicator-active-color='#d43c33'>
+    <swiper-item wx:for="{{bannerList}}" wx:key="image_id">
+      <image src="{{item.thum_link}}" ></image>
+         </swiper-item>
+      </swiper>
+
+  <!--五个小图标导航区域  -->
+  <view class="navContainer">
+    <view class="navItem">
+      <text class="iconfont icon-tuijian"></text>
+      <text>每日推荐</text> 
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-songlist-01"></text>
+      <text>歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-paihangbang"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhibo"></text>
+      <text>MV</text>
+    </view>
+  </view>
+
+  <!-- 推荐歌曲区域 -->
+  <view class="recommendContainer">
+    <view class="header">
+      <text class="title">推荐歌曲</text>
+      <view>
+      <text>精心推荐你喜欢的歌曲</text>
+      <text class="watchmore">查看更多</text>
+    </view>
+    </view>
+  </view>
+
+  <!-- 推荐区域内容模块 -->
+  <scroll-view class="recommendScroll" enable-flex scroll-x>
+    <view class="scrolItem" wx:for="{{bannerList}}" wx:key="image_id">
+      <image src="{{item.thum_link}}" lazy-load="true"></image>
+        <text>哦靓丽的风景线哦靓丽的风景线哦靓丽的风景线</text>
+    </view>
+    
+  </scroll-view>
+
+</view>

@@ -1,0 +1,80 @@
+/* pages/index/index.js.wxss */
+.banners{
+  width: 100%;
+  height: 300rpx;
+}
+.banners image{
+  width: 100%;
+  height: 100%;
+}
+/* 图标导航区域 */
+.navContainer{
+  display: flex;
+
+}
+.navItem{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 20%;
+}
+.navItem .iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  background: rgb(240, 19, 19);
+  font-size: 50rpx;
+  color: #fff;
+  margin: 20rpx 0;
+}
+.navItem text{
+  font-size: 25rpx;
+}
+/* 推荐歌曲区域 */
+.recommendContainer{
+  padding: 20rpx;
+}
+.recommendContainer .header{
+  padding-bottom: 15rpx;
+}
+.recommendContainer .header .title{
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+.recommendContainer .header .watchmore{
+  float: right;
+  border: 1rpx solid #333;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  font-size: 22rpx;
+}
+
+/* 推荐区域内容模块 */
+.recommendScroll{
+  display: flex;
+}
+.scrolItem{
+  width: 200rpx;
+  margin-right: 25rpx;
+}
+.scrolItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.scrolItem text{
+  font-size: 25rpx;
+  /* 单行文本溢出隐藏 添加省略号 */
+  /*   overflow: hidden;
+  text-overflow: ellipsis; */
+  /* 多行文本 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
