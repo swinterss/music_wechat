@@ -1,13 +1,44 @@
 {
   "pages": [
-    "pages/index/index.js"
+    "pages/index/index",
+    "pages/recommondSongs/recommondSongs",
+    "pages/songDetail/songDetail",
+    "pages/video/video",
+    "pages/peopleCenter/peopleCenter",
+    
+    "pages/login/login"
+    
   ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "music"
-    
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/static/tabBarIcon/select_mainPage.png",
+        "selectedIconPath": "/static/tabBarIcon/mainPage.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "/static/tabBarIcon/video.png",
+        "selectedIconPath": "/static/tabBarIcon/select_video.png"
+      },
+      {
+        "pagePath": "pages/peopleCenter/peopleCenter",
+        "text": "个人中心",
+        "iconPath": "/static/tabBarIcon/popleCenter.png",
+        "selectedIconPath": "/static/tabBarIcon/select_popleCenter.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes":["audio"]
 }

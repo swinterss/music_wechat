@@ -1,0 +1,21 @@
+<view class="songDetailContainer">
+  <view class="auther">{{song.singer.name}}</view>
+  <view class="circle"></view>
+  <image class="needle {{isrotate?'needleRotate':''}}" src="/static/images/songs/needle.png"></image>
+  
+  <view class="discContainer {{isrotate?'discanimation':''}}" >
+    <image class="disc" src="/static/images/songs/disc.png"></image>
+    <image class="musicImage" src="{{song.cover}}"></image>
+  </view>
+
+  <view class="musicControl">
+    <text class="iconfont icon-bofangye-caozuolan-suijibofang"></text>
+
+    <text class="iconfont icon-icon_shangyishou" id="pre" bindtap="handleSwitch"></text>
+    <text class="iconfont {{isrotate? 'icon-bofang' :'icon-icon_zanting'}} big" bindtap="handleMusicPlay"></text>
+    <text class="iconfont icon-next" id="next" bindtap="handleSwitch"></text>
+    <text class="iconfont icon-bofangliebiao"></text>
+  </view>
+ 
+
+</view>

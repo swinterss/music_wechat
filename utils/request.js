@@ -1,18 +1,19 @@
 
 // 请求接口的封装
-export default (url,data={},method='get')=>{
+import config from './config'
+export default (url,data={},method='GET')=>{
   return new Promise((resolve,reject)=>{
     wx.request({
-      url,
+      url:config.host + url,
       data,
       method,
       success:(res)=>{
        console.log('请求成功',res) 
-       resolve(res.data)
+       resolve(res)
       },
-      fail:(res)=>{
-        console.log('请求失败',res)
-        reject(res.data)
+      fail:(err)=>{
+        console.log('请求失败',err)
+        reject(err)
       }
     })
   })

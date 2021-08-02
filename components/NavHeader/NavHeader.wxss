@@ -1,0 +1,15 @@
+ .header{
+  padding-bottom: 15rpx;
+}
+.header .title{
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+ .header .watchmore{
+  float: right;
+  border: 1rpx solid #333;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  font-size: 22rpx;
+}

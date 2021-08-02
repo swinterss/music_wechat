@@ -56,6 +56,7 @@
 /* 推荐区域内容模块 */
 .recommendScroll{
   display: flex;
+  height: 300rpx;
 }
 .scrolItem{
   width: 200rpx;
@@ -77,4 +78,43 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+}
+/* 排行榜区域 */
+.topList{
+  padding: 20rpx;
+}
+.topListSwiper{
+  height: 400rpx;
+}
+.swiperItem{
+  width: 96%;
+  background:floralwhite 
+}
+.musicList{
+  /* 当父元素设置为flex，其子元素会自动成为flex */
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.swiperItem .title{
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.musicList image{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 6rpx;
+}
+.musicList .count{
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.musicList .musicName{
+  height: 100rpx;
+  line-height: 100rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+ text-overflow: ellipsis;
 }

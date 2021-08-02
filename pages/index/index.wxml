@@ -1,0 +1,87 @@
+<!--pages/index/index.js.wxml-->
+<view class="indexContainer">
+  <!--轮播图bfc-->
+  <swiper class="banners" indicator-dots="true" indicator-color='ivory' indicator-active-color='#d43c33'>
+    <swiper-item wx:for="{{bannerList}}" wx:key="image_id">
+      <image src="{{item.thum_link}}" ></image>
+         </swiper-item>
+      </swiper>
+
+  <!--五个小图标导航区域  -->
+  <view class="navContainer">
+    <view class="navItem" bindtap="recommond">
+      <text class="iconfont icon-tuijian"></text>
+      <text>每日推荐</text> 
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-songlist-01"></text>
+      <text>歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-paihangbang"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhibo"></text>
+      <text>MV</text>
+    </view>
+  </view>
+
+  <!-- 推荐歌曲区域 -->
+  <view class="recommendContainer">
+    <NavHeader titleOne="为你推荐"  titleTow="Love"></NavHeader>
+  </view>
+
+  <!-- 推荐区域内容模块 -->
+  <scroll-view class="recommendScroll" enable-flex scroll-x>
+    <view class="scrolItem" wx:for="{{bannerList}}" wx:key="image_id">
+      <image src="{{item.thum_link}}" lazy-load="true"></image>
+        <text>哦靓丽的风景线哦靓丽的风景线哦靓丽的风景线</text>
+    </view>
+    
+  </scroll-view>
+
+  <!-- 排行榜区域 -->
+  <view class="topList">
+    <!-- top -->
+    <NavHeader titleOne="排行榜"  titleTow="热歌导向"></NavHeader>
+    <!-- contain -->
+    <swiper class="topListSwiper" circular next-margin="50rpx"  previous-margin="50rpx" >
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="title">云音乐热歌榜</view>
+          <view class="musicList">
+            <image src="https://xiaoyao.cn1.utools.club/image/static/origin/388635168132304896.jpg"></image>
+            <text class="count">1</text>
+            <text class="musicName">清空</text>
+          </view>
+          <view class="musicList">
+            <image src="https://xiaoyao.cn1.utools.club/image/static/origin/388635168132304896.jpg"></image>
+            <text class="count">2</text>
+            <text class="musicName">老男孩</text>
+          </view>
+       </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiperItem">
+          <view class="title">云音乐热歌榜</view>
+          <view class="musicList">
+            <image src="https://xiaoyao.cn1.utools.club/image/static/origin/388635168132304896.jpg"></image>
+            <text class="count">1</text>
+            <text class="musicName">清空</text>
+          </view>
+          <view class="musicList">
+            <image src="https://xiaoyao.cn1.utools.club/image/static/origin/388635168132304896.jpg"></image>
+            <text class="count">2</text>
+            <text class="musicName">老男孩</text>
+          </view>
+       </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+</view>

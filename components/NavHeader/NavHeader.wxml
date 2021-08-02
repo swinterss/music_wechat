@@ -1,0 +1,8 @@
+<!--components/NavHeader/NavHeader.wxml-->
+<view class="header">
+      <text class="title">{{titleOne}}</text>
+      <view>
+      <text>{{titleTow}}</text>
+      <text class="watchmore">查看更多</text>
+    </view>
+    </view>
